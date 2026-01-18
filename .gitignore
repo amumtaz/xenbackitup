@@ -1,0 +1,9 @@
+# Backup outputs
+*.tgz
+*.tar.gz
+
+# Logs
+*.log
+
+# macOS
+.DS_Store
