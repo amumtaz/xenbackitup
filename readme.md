@@ -4,21 +4,23 @@ A small, robust Bash script that archives multiple project folders into date-sta
 
 Works well for one-off runs, cron jobs, or simple scheduled backups.
 
----
-
-## ✨ Features
-
-- ✅ Backup multiple folders in one run  
-- ✅ Date-stamped archive names (YYYY-MM-DD)  
-- ✅ Exclude common heavy directories (configurable)  
-- ✅ Safe handling of paths with spaces  
-- ✅ Works on macOS and Linux  
-- ✅ Cron-friendly  
-- ✅ Each folder archived independently — failures in one archive do not stop the rest
+This Readme is generated with the help of an AI tool. If you find any mistakes, please report them.
 
 ---
 
-## 📦 Example output
+## Features
+
+- Backup multiple folders in one run  
+- Date-stamped archive names (YYYY-MM-DD)  
+- Exclude common heavy directories (configurable)  
+- Safe handling of paths with spaces  
+- Works on macOS and Linux  
+- Cron-friendly  
+- Each folder archived independently — failures in one archive do not stop the rest
+
+---
+
+## Example output
 
 After running the script you might see:
 
@@ -30,7 +32,7 @@ project_c_2026-01-17.tgz
 
 ---
 
-## ⚙️ Requirements
+## Requirements
 
 - Bash 4+ (the script checks the Bash version and warns if older)
 - `tar`
@@ -40,7 +42,7 @@ project_c_2026-01-17.tgz
 
 ---
 
-## ��� Installation
+## Installation
 
 1. Clone the repo (if applicable)
 
@@ -59,7 +61,7 @@ chmod +x backup.sh
 
 ---
 
-## ⚙️ Configuration (inside `backup.sh`)
+## Configuration (inside `backup.sh`)
 
 - SOURCE_FOLDERS: an array of absolute paths to back up
 - OUTPUT_DIR: absolute path where `.tgz` files are written
@@ -168,31 +170,31 @@ echo "Backup run complete."
 
 ---
 
-## ✅ Usage
+## Usage
 
 Run the script directly:
 
 ```bash
-./backup.sh
+./XenBackitUp.sh
 ```
 
 Make sure all paths in `SOURCE_FOLDERS` and `OUTPUT_DIR` are absolute paths when using cron.
 
 ---
 
-## ⏱️ Cron example
+## Cron example
 
 Daily backup at 2:00 AM, logging output and errors:
 
 ```
-0 2 * * * /path/to/backup.sh >> /path/to/backup.log 2>&1
+0 2 * * * /path/to/XenBackitUp.sh >> /path/to/XenBackitUp.log 2>&1
 ```
 
 Important: Cron runs with a minimal environment — always use absolute paths inside the script.
 
 ---
 
-## 🔐 Safety & behavior notes
+## Safety & behavior notes
 
 - The script uses strict handling for unset variables (`set -u`) and `pipefail`.
 - Each folder is archived independently. Failures in one archive do not stop others.
@@ -201,7 +203,7 @@ Important: Cron runs with a minimal environment — always use absolute paths in
 
 ---
 
-## 🧰 Troubleshooting tips
+## Troubleshooting tips
 
 - Permission errors: ensure the user running the script can read the source directories and write to the output directory.
 - Disk space: check free disk space — compression still needs temporary space for tar operations.
@@ -210,7 +212,7 @@ Important: Cron runs with a minimal environment — always use absolute paths in
 
 ---
 
-## 🔁 Optional improvements / contributions
+## Optional improvements / contributions
 
 Pull requests welcome for enhancements such as:
 - Retention policies (delete backups older than N days)
@@ -221,13 +223,13 @@ Pull requests welcome for enhancements such as:
 
 ---
 
-## 📜 License
+## License
 
 MIT License — free for personal and commercial use. See the `LICENSE` file for full text.
 
 ---
 
-## 🙌 Contributing
+## Contributing
 
 If you make improvements, please open a PR or issue. Small, focused PRs with tests or clear instructions are appreciated.
 
